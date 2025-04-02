@@ -1,0 +1,61 @@
+1. Implement Home Handler
+ HomeHandler: Display a list of posts (even if it's static for now, as you can connect it to the database later).
+
+ Add a basic HTML page to display posts.
+
+2. Implement Registration and Login Handlers
+ RegisterHandler:
+
+Collect email, username, and password.
+
+Validate if the email is already taken and respond accordingly.
+
+Hash the password (you can use bcrypt here).
+
+Store the new user data in the SQLite database.
+
+ LoginHandler:
+
+Collect email and password.
+
+Verify the credentials with the stored data.
+
+Set a session cookie (you can use a UUID here if you like) to store the user's logged-in status.
+
+3. Set Up Session Management
+ Implement cookie-based session management to keep track of logged-in users.
+
+ Ensure sessions have expiration times (set the expiration when you set the cookie).
+
+ Use a session verification middleware to check if a user is logged in when accessing certain routes.
+
+4. Set Up Database Queries for Users
+ Write SQL queries to interact with the database:
+
+Insert new users.
+
+Check if an email already exists.
+
+Verify user credentials during login.
+
+5. Create Basic HTML Pages
+ Home Page:
+
+Display posts and comments.
+
+Provide links to login and register.
+
+ Register Page: Simple form to input email, username, and password.
+
+ Login Page: Simple form to input email and password.
+
+6. Test Registration and Login
+ Test the registration and login flows to ensure they work properly.
+
+ Check that cookies are set correctly and the session lasts for the desired duration.
+
+7. Next Steps After Authentication
+Once the authentication system is functioning, move on to the functionality for posts, comments, likes/dislikes, and filtering. Let me know if you'd like to work through those tasks next!
+
+
+
